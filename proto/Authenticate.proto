@@ -1,0 +1,9 @@
+syntax = "proto3";
+package auth;
+
+import "BearerToken.proto";
+import "EncryptedCredentials.proto";
+
+service Authenticator {
+  rpc Authenticate(EncryptedCredentials) returns (BearerToken) {};
+}

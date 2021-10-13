@@ -1,0 +1,9 @@
+syntax = "proto3";
+package auth;
+
+import "google/protobuf/timestamp.proto";
+
+message BearerToken {
+  string token = 1;
+  google.protobuf.Timestamp expiry = 2;
+}
